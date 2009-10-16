@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">人体生物钟</string>
+	<string name="app_version">1.0</string>
+	<string name="app_about">人体生物钟版权所有\nEmail:liujiuwu(at)gmail.com\nQQ:923933533</string>
+	<string name="setting_title">人体生物钟设置</string>
+	<string name="setting_item_name">姓名</string>
+	<string name="setting_item_no_name">请设置您的姓名</string>
+	<string name="setting_item_birthday">生日（公历）</string>
+	<string name="setting_item_no_birthday">请设置您的生日</string>
+
+	<string name="bt_ok">确定</string>
+	<string name="bt_ok_01">我搞错了</string>
+	<string name="bt_ok_02">我知道了</string>
+	<string name="bt_ok_03">开始设置</string>
+	<string name="bt_ok_04">退出程序</string>
+	<string name="bt_ok_05">设置好了</string>
+	<string name="bt_close">关闭</string>
+	<string name="bt_cancel">取消</string>
+
+	<string name="dialog_error_title">出了点问题</string>
+	<string name="error_message_01">您还没有出生呢，期待您来到这美丽新世界。</string>
+	<string name="error_message_02">您还没有设置姓名或生日</string>
+
+	<string name="physical">体力</string>
+	<string name="sensitive">情绪</string>
+	<string name="intellectual">智力</string>
+
+	<string name="date_display_format">yyyy年MM月dd日</string>
+	<string name="date_store_format">yyyy-MM-dd</string>
+	<string name="date_store_format_split">-</string>
+	<string name="your_birthday">您的生日是%s</string>
+	<string name="your_lunar_birthday">(农历%s，肖%s)</string>
+	<string name="your_life">至%s您已经在美丽的地球上生活了%s天。</string>
+	<string name="your_life_0">整个世界都在期待您的到来，美妙的人生即将开始。</string>
+	<string name="your_life_1">其实整个世界都在期待您尽快来到这美丽新世界。</string>
+
+	<string name="menu_setting">设置</string>
+	<string name="menu_help">帮助</string>
+	<string name="menu_about">关于</string>
+	<string name="menu_exit">退出</string>
+</resources>

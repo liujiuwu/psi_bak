@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<!-- 要显示农历生日的语言（亚洲国家或地区） -->
+	<string-array name="lunarLocales">
+		<item>zh</item>
+		<item>zh_CN</item>
+		<item>zh_TW</item>
+		<item>ja</item>
+		<item>ko</item>
+		<item>ko_KR</item>
+		<item>ja_JP</item>
+	</string-array>
+</resources>
