@@ -111,6 +111,10 @@ containing a value of this type.
         public static final int app_about=0x7f050002;
         public static final int app_name=0x7f050000;
         public static final int app_version=0x7f050001;
+        public static final int birthday_lunar_message=0x7f05001c;
+        public static final int birthday_message=0x7f05001b;
+        public static final int birthday_warn_days=0x7f050019;
+        public static final int birthday_warn_message=0x7f05001a;
         public static final int bt_cancel=0x7f05000f;
         public static final int bt_close=0x7f05000e;
         public static final int bt_ok=0x7f050008;
@@ -126,10 +130,10 @@ containing a value of this type.
         public static final int error_message_01=0x7f050011;
         public static final int error_message_02=0x7f050012;
         public static final int intellectual=0x7f050015;
-        public static final int menu_about=0x7f050020;
-        public static final int menu_exit=0x7f050021;
-        public static final int menu_help=0x7f05001f;
-        public static final int menu_setting=0x7f05001e;
+        public static final int menu_about=0x7f050024;
+        public static final int menu_exit=0x7f050025;
+        public static final int menu_help=0x7f050023;
+        public static final int menu_setting=0x7f050022;
         public static final int physical=0x7f050013;
         public static final int sensitive=0x7f050014;
         public static final int setting_item_birthday=0x7f050006;
@@ -137,11 +141,11 @@ containing a value of this type.
         public static final int setting_item_no_birthday=0x7f050007;
         public static final int setting_item_no_name=0x7f050005;
         public static final int setting_title=0x7f050003;
-        public static final int your_birthday=0x7f050019;
-        public static final int your_life=0x7f05001b;
-        public static final int your_life_0=0x7f05001c;
-        public static final int your_life_1=0x7f05001d;
-        public static final int your_lunar_birthday=0x7f05001a;
+        public static final int your_birthday=0x7f05001d;
+        public static final int your_life=0x7f05001f;
+        public static final int your_life_0=0x7f050020;
+        public static final int your_life_1=0x7f050021;
+        public static final int your_lunar_birthday=0x7f05001e;
     }
     public static final class styleable {
         /** Attributes that can be used with a com_admob_android_ads_AdView.

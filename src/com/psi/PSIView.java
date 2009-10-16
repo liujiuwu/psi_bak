@@ -199,14 +199,7 @@ public class PSIView extends View {
 		Calendar birthday = Calendar.getInstance();
 		birthday.setTime(psiModel.getBirthday());
 		Lunar lunar = new Lunar(birthday);
-
-		String lunarBirthday = "";
-		for (String locale : getResources().getStringArray(R.array.lunarLocales)) {
-			if (locale.equalsIgnoreCase(Locale.getDefault().toString())) {
-				lunarBirthday = getResources().getString(R.string.your_lunar_birthday, lunar.toString(), lunar.animalsYear());
-				break;
-			}
-		}
+		String lunarBirthday = isSupportLunar() ? getResources().getString(R.string.your_lunar_birthday, lunar.toString(), lunar.animalsYear()) : "";
 
 		int textStartY = 30;
 		int textStartX = startX + 15;
@@ -294,5 +287,14 @@ public class PSIView extends View {
 
 	public void setPsiModel(PSIModel psiModel) {
 		this.psiModel = psiModel;
+	}
+
+	public boolean isSupportLunar() {
+		for (String locale : getResources().getStringArray(R.array.lunarLocales)) {
+			if (locale.equalsIgnoreCase(Locale.getDefault().toString())) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

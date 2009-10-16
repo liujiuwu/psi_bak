@@ -3,7 +3,7 @@ package com.psi;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Locale;
+import java.util.Date;
 import java.util.Random;
 
 import android.app.Activity;
@@ -14,7 +14,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,6 +25,8 @@ import android.widget.Toast;
 
 import com.psi.model.PSIModel;
 import com.psi.utils.Constants;
+import com.psi.utils.DateUtils;
+import com.psi.utils.Lunar;
 
 public class PSIActivity extends Activity {
 	private static final int[] CAKE_IMGS = { R.drawable.cake1, R.drawable.cake2, R.drawable.cake3, R.drawable.cake4 };
@@ -50,7 +51,6 @@ public class PSIActivity extends Activity {
 	}
 
 	private void initPSI() {
-		Log.i("lang", Locale.getDefault().getLanguage());
 		String name = settings.getString("name", "").trim();
 		String birthdayStr = settings.getString("birthday", "").trim();
 		if ("".equals(name) || "".equals(birthdayStr)) {
@@ -67,7 +67,7 @@ public class PSIActivity extends Activity {
 			psiModel.setScaling(0.8f);
 			psiModel.setCurrentDate(Calendar.getInstance().getTime());
 			psiView.setPsiModel(psiModel);
-			showToast();
+			happyBirthday();
 		}
 	}
 
@@ -147,6 +147,7 @@ public class PSIActivity extends Activity {
 		psiModel.setCurrentDate(c.getTime());
 		psiView.setPsiModel(psiModel);
 		psiView.invalidate();
+		happyBirthday();
 	}
 
 	@Override
@@ -175,16 +176,54 @@ public class PSIActivity extends Activity {
 		finish();
 	}
 
+	private void happyBirthday() {
+		Date birthday = psiModel.getBirthday();
+		Date currentViewDate = psiModel.getCurrentDate();
+		String happyBirthdayMessage = getString(R.string.birthday_message);
+		String happyBirthdayWarnMessage = getString(R.string.birthday_warn_message, getString(R.string.birthday_warn_days));
+		String happyBirthdayLunarMessage = getString(R.string.birthday_lunar_message);
+
+		//过阳历生日
+		if (birthday.getMonth() == currentViewDate.getMonth() && birthday.getDate() == currentViewDate.getDate()) {
+			happyBirthdayToYou(happyBirthdayMessage);
+		}
+
+		//阳历生日提醒
+		Date nexBirthday = new Date();
+		nexBirthday.setDate(birthday.getDate());
+		nexBirthday.setMonth(birthday.getMonth());
+		nexBirthday.setYear(currentViewDate.getYear());
+		long days = DateUtils.getDaysBetween(currentViewDate, nexBirthday);
+		if (days > 0 && days == Integer.parseInt(getString(R.string.birthday_warn_days))) {
+			happyBirthdayToYou(happyBirthdayWarnMessage);
+		}
+
+		//过农历生日
+		if (psiView.isSupportLunar()) {
+			Calendar lunarBirthday = Calendar.getInstance();
+			lunarBirthday.setTime(birthday);
+			Lunar lunar = new Lunar(lunarBirthday);
+
+			Calendar lunarCurrentViewDate = Calendar.getInstance();
+			lunarCurrentViewDate.setTime(currentViewDate);
+			Lunar currentDateLunar = new Lunar(lunarCurrentViewDate);
+
+			if (lunar.getMonth() == currentDateLunar.getMonth() && lunar.getDay() == currentDateLunar.getDay()) {
+				happyBirthdayToYou(happyBirthdayLunarMessage);
+			}
+		}
+	}
+
 	private View inflateView(int resource) {
 		LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		return vi.inflate(resource, null);
 	}
 
-	protected void showToast() {
+	protected void happyBirthdayToYou(String message) {
 		View view = inflateView(R.layout.birthday_message_panel);
 		TextView tv = (TextView) view.findViewById(R.id.message);
-		tv.setTextSize(36);
-		tv.setText("生日快乐");
+		tv.setTextSize(20);
+		tv.setText(message);
 		ImageView cakeImg = (ImageView) view.findViewById(R.id.cakeImg);
 		cakeImg.setImageResource(CAKE_IMGS[Math.abs(new Random().nextInt() % CAKE_IMGS.length)]);
 		Toast toast = new Toast(this);

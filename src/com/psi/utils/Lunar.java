@@ -152,6 +152,30 @@ public class Lunar {
 		day = offset + 1;
 	}
 
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public int getDay() {
+		return day;
+	}
+
+	public void setDay(int day) {
+		this.day = day;
+	}
+
 	public static String getChinaDayString(int day) {
 		String chineseTen[] = { "初", "十", "廿", "卅" };
 		int n = day % 10 == 0 ? 9 : day % 10 - 1;
