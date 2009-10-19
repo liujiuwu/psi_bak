@@ -64,7 +64,7 @@ public class PSIActivity extends Activity {
 			}
 			this.setTitle(this.getTitle() + " - " + name);
 			psiModel = new PSIModel(name, birthday.getTime());
-			psiModel.setScaling(0.8f);
+			psiModel.setScaling(0.75f);
 			psiModel.setCurrentDate(Calendar.getInstance().getTime());
 			psiView.setPsiModel(psiModel);
 			happyBirthday();

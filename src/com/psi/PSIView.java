@@ -43,7 +43,7 @@ public class PSIView extends View {
 	private int viewWidth;
 	private int curveHeight;
 	private int startX = 33;
-	private int startY = 65;
+	private int startY = 60;
 	private SimpleDateFormat displayDateFormat;
 
 	public PSIView(Context context) {
@@ -188,9 +188,9 @@ public class PSIView extends View {
 		}
 
 		Bitmap bg = BitmapFactory.decodeResource(getResources(), month_imgs[month]);
-		canvas.drawBitmap(bg, (viewWidth - bg.getWidth()) / 2, startY, paints.get(BG_PAINT));
-		Bitmap logo = BitmapFactory.decodeResource(getResources(), R.drawable.psi);
-		canvas.drawBitmap(logo, 0, 5, paints.get(BG_PAINT));
+		canvas.drawBitmap(bg, (viewWidth - bg.getWidth()) / 2, startY-3, paints.get(BG_PAINT));
+		//Bitmap logo = BitmapFactory.decodeResource(getResources(), R.drawable.psi);
+		//canvas.drawBitmap(logo, 0, 0, paints.get(BG_PAINT));
 
 		i = XAxisLabelWidth;
 		long days = DateUtils.getDaysBetween(psiModel.getBirthday(), psiModel.getCurrentDate());
@@ -201,7 +201,7 @@ public class PSIView extends View {
 		Lunar lunar = new Lunar(birthday);
 		String lunarBirthday = isSupportLunar() ? getResources().getString(R.string.your_lunar_birthday, lunar.toString(), lunar.animalsYear()) : "";
 
-		int textStartY = 30;
+		int textStartY = startY - 30;
 		int textStartX = startX + 15;
 		canvas.drawText(getResources().getString(R.string.your_birthday, displayDateFormat.format(psiModel.getBirthday())) + lunarBirthday, textStartX, textStartY, textPaints.get(CURRENT_DATE_TEXT_PAINT));
 		if (days > 0) {
