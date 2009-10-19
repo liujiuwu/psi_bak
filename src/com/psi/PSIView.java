@@ -188,7 +188,7 @@ public class PSIView extends View {
 		}
 
 		Bitmap bg = BitmapFactory.decodeResource(getResources(), month_imgs[month]);
-		canvas.drawBitmap(bg, (viewWidth - bg.getWidth()) / 2, startY-3, paints.get(BG_PAINT));
+		canvas.drawBitmap(bg, (viewWidth - bg.getWidth()) / 2, startY - 3, paints.get(BG_PAINT));
 		//Bitmap logo = BitmapFactory.decodeResource(getResources(), R.drawable.psi);
 		//canvas.drawBitmap(logo, 0, 0, paints.get(BG_PAINT));
 
@@ -199,10 +199,10 @@ public class PSIView extends View {
 		Calendar birthday = Calendar.getInstance();
 		birthday.setTime(psiModel.getBirthday());
 		Lunar lunar = new Lunar(birthday);
-		String lunarBirthday = isSupportLunar() ? getResources().getString(R.string.your_lunar_birthday, lunar.toString(), lunar.animalsYear()) : "";
+		String lunarBirthday = isSupportLunar() ? getResources().getString(R.string.your_lunar_birthday, lunar.toString(), getAnimal(lunar.getYear())) : "";
 
-		int textStartY = startY - 30;
-		int textStartX = startX + 15;
+		int textStartY = startY - 35;
+		int textStartX = startX;
 		canvas.drawText(getResources().getString(R.string.your_birthday, displayDateFormat.format(psiModel.getBirthday())) + lunarBirthday, textStartX, textStartY, textPaints.get(CURRENT_DATE_TEXT_PAINT));
 		if (days > 0) {
 			canvas.drawText(getResources().getString(R.string.your_life, displayDateFormat.format(psiModel.getCurrentDate()), days), textStartX, textStartY + 20, textPaints.get(CURRENT_DATE_TEXT_PAINT));
@@ -296,5 +296,9 @@ public class PSIView extends View {
 			}
 		}
 		return false;
+	}
+
+	public String getAnimal(int year) {
+		return getResources().getStringArray(R.array.animals)[(year - 4) % 12];
 	}
 }

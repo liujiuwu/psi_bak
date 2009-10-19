@@ -95,8 +95,8 @@ public class PSIActivity extends Activity {
 		super.onCreateOptionsMenu(menu);
 		menu.add(0, MENU_SETTINGS, 0, getString(R.string.menu_setting)).setIcon(android.R.drawable.ic_menu_preferences);
 		menu.add(0, MENU_HELP, 0, getString(R.string.menu_help)).setIcon(android.R.drawable.ic_menu_help);
-		menu.add(0, MENU_ABOUT, 0, getString(R.string.menu_about));
-		menu.add(0, MENU_EXIT, 0, getString(R.string.menu_exit));
+		menu.add(0, MENU_ABOUT, 0, getString(R.string.menu_about)).setIcon(android.R.drawable.ic_menu_info_details);
+		menu.add(0, MENU_EXIT, 0, getString(R.string.menu_exit)).setIcon(android.R.drawable.ic_lock_power_off);
 		return true;
 	}
 
@@ -107,6 +107,7 @@ public class PSIActivity extends Activity {
 			gotoSettingActivity();
 			return true;
 		case MENU_HELP:
+			showDialog(MENU_HELP);
 			return true;
 		case MENU_ABOUT:
 			showDialog(MENU_ABOUT);
@@ -156,6 +157,13 @@ public class PSIActivity extends Activity {
 		Builder builder;
 
 		switch (id) {
+		case MENU_HELP:
+			builder = new AlertDialog.Builder(this);
+			builder.setTitle(getString(R.string.app_name) + getString(R.string.menu_help));
+			builder.setMessage(getString(R.string.app_help));
+			builder.setPositiveButton(getString(R.string.bt_ok), null);
+			result = builder.create();
+			break;
 		case MENU_ABOUT:
 			builder = new AlertDialog.Builder(this);
 			builder.setTitle(getString(R.string.app_name) + " " + getString(R.string.app_version));

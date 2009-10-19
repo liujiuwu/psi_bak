@@ -9,61 +9,18 @@ package com.psi;
 
 public final class R {
     public static final class array {
+        /**  十二生肖 
+ 十二生肖 
+ 十二生肖 
+         */
+        public static final int animals=0x7f040001;
         /**  要显示农历生日的语言（亚洲国家或地区） 
+ 要显示农历生日的语言（亚洲国家或地区） 
+ 要顯示農歷生日的語言（亞洲國家或地區） 
          */
         public static final int lunarLocales=0x7f040000;
     }
     public static final class attr {
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int backgroundColor=0x7f010001;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int isGoneWithoutAd=0x7f010005;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int keywords=0x7f010003;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int refreshInterval=0x7f010004;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int testing=0x7f010000;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int textColor=0x7f010002;
     }
     public static final class drawable {
         public static final int application_background=0x7f020000;
@@ -109,154 +66,43 @@ containing a value of this type.
     }
     public static final class string {
         public static final int app_about=0x7f050002;
+        public static final int app_help=0x7f050003;
         public static final int app_name=0x7f050000;
         public static final int app_version=0x7f050001;
-        public static final int birthday_lunar_message=0x7f05001c;
-        public static final int birthday_message=0x7f05001b;
-        public static final int birthday_warn_days=0x7f050019;
-        public static final int birthday_warn_message=0x7f05001a;
-        public static final int bt_cancel=0x7f05000f;
-        public static final int bt_close=0x7f05000e;
-        public static final int bt_ok=0x7f050008;
-        public static final int bt_ok_01=0x7f050009;
-        public static final int bt_ok_02=0x7f05000a;
-        public static final int bt_ok_03=0x7f05000b;
-        public static final int bt_ok_04=0x7f05000c;
-        public static final int bt_ok_05=0x7f05000d;
-        public static final int date_display_format=0x7f050016;
-        public static final int date_store_format=0x7f050017;
-        public static final int date_store_format_split=0x7f050018;
-        public static final int dialog_error_title=0x7f050010;
-        public static final int error_message_01=0x7f050011;
-        public static final int error_message_02=0x7f050012;
-        public static final int intellectual=0x7f050015;
-        public static final int menu_about=0x7f050024;
-        public static final int menu_exit=0x7f050025;
-        public static final int menu_help=0x7f050023;
-        public static final int menu_setting=0x7f050022;
-        public static final int physical=0x7f050013;
-        public static final int sensitive=0x7f050014;
-        public static final int setting_item_birthday=0x7f050006;
-        public static final int setting_item_name=0x7f050004;
-        public static final int setting_item_no_birthday=0x7f050007;
-        public static final int setting_item_no_name=0x7f050005;
-        public static final int setting_title=0x7f050003;
-        public static final int your_birthday=0x7f05001d;
-        public static final int your_life=0x7f05001f;
-        public static final int your_life_0=0x7f050020;
-        public static final int your_life_1=0x7f050021;
-        public static final int your_lunar_birthday=0x7f05001e;
+        public static final int birthday_lunar_message=0x7f05001d;
+        public static final int birthday_message=0x7f05001c;
+        public static final int birthday_warn_days=0x7f05001a;
+        public static final int birthday_warn_message=0x7f05001b;
+        public static final int bt_cancel=0x7f050010;
+        public static final int bt_close=0x7f05000f;
+        public static final int bt_ok=0x7f050009;
+        public static final int bt_ok_01=0x7f05000a;
+        public static final int bt_ok_02=0x7f05000b;
+        public static final int bt_ok_03=0x7f05000c;
+        public static final int bt_ok_04=0x7f05000d;
+        public static final int bt_ok_05=0x7f05000e;
+        public static final int date_display_format=0x7f050017;
+        public static final int date_store_format=0x7f050018;
+        public static final int date_store_format_split=0x7f050019;
+        public static final int dialog_error_title=0x7f050011;
+        public static final int error_message_01=0x7f050012;
+        public static final int error_message_02=0x7f050013;
+        public static final int intellectual=0x7f050016;
+        public static final int menu_about=0x7f050025;
+        public static final int menu_exit=0x7f050026;
+        public static final int menu_help=0x7f050024;
+        public static final int menu_setting=0x7f050023;
+        public static final int physical=0x7f050014;
+        public static final int sensitive=0x7f050015;
+        public static final int setting_item_birthday=0x7f050007;
+        public static final int setting_item_name=0x7f050005;
+        public static final int setting_item_no_birthday=0x7f050008;
+        public static final int setting_item_no_name=0x7f050006;
+        public static final int setting_title=0x7f050004;
+        public static final int your_birthday=0x7f05001e;
+        public static final int your_life=0x7f050020;
+        public static final int your_life_0=0x7f050021;
+        public static final int your_life_1=0x7f050022;
+        public static final int your_lunar_birthday=0x7f05001f;
     }
-    public static final class styleable {
-        /** Attributes that can be used with a com_admob_android_ads_AdView.
-           <p>Includes the following attributes:</p>
-           <table border="2" width="85%" align="center" frame="hsides" rules="all" cellpadding="5">
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute<th>Summary</tr>
-           <tr><th><code>{@link #com_admob_android_ads_AdView_backgroundColor com.psi:backgroundColor}</code><td></tr>
-           <tr><th><code>{@link #com_admob_android_ads_AdView_isGoneWithoutAd com.psi:isGoneWithoutAd}</code><td></tr>
-           <tr><th><code>{@link #com_admob_android_ads_AdView_keywords com.psi:keywords}</code><td></tr>
-           <tr><th><code>{@link #com_admob_android_ads_AdView_refreshInterval com.psi:refreshInterval}</code><td></tr>
-           <tr><th><code>{@link #com_admob_android_ads_AdView_testing com.psi:testing}</code><td></tr>
-           <tr><th><code>{@link #com_admob_android_ads_AdView_textColor com.psi:textColor}</code><td></tr>
-           </table>
-           @see #com_admob_android_ads_AdView_backgroundColor
-           @see #com_admob_android_ads_AdView_isGoneWithoutAd
-           @see #com_admob_android_ads_AdView_keywords
-           @see #com_admob_android_ads_AdView_refreshInterval
-           @see #com_admob_android_ads_AdView_testing
-           @see #com_admob_android_ads_AdView_textColor
-         */
-        public static final int[] com_admob_android_ads_AdView = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004, 0x7f010005
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.psi.R.attr#backgroundColor}
-          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:backgroundColor
-        */
-        public static final int com_admob_android_ads_AdView_backgroundColor = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.psi.R.attr#isGoneWithoutAd}
-          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:isGoneWithoutAd
-        */
-        public static final int com_admob_android_ads_AdView_isGoneWithoutAd = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.psi.R.attr#keywords}
-          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:keywords
-        */
-        public static final int com_admob_android_ads_AdView_keywords = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.psi.R.attr#refreshInterval}
-          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:refreshInterval
-        */
-        public static final int com_admob_android_ads_AdView_refreshInterval = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.psi.R.attr#testing}
-          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:testing
-        */
-        public static final int com_admob_android_ads_AdView_testing = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.psi.R.attr#textColor}
-          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android:textColor
-        */
-        public static final int com_admob_android_ads_AdView_textColor = 2;
-    };
 }

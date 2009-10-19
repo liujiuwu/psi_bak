@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">人體生物鐘</string>
+	<string name="app_version">1.0</string>
+	<string name="app_about">人體生物鐘版權所有\nEmail:liujiuwu(at)gmail.com\nQQ:923933533</string>
+	<string name="app_help">初次運行需要設置姓名和生日，默認顯示一個月的生物鐘曲線。\n上方向鍵：上一月  下方向鍵：下一月\n左方向鍵：上一天   右方向鍵：下一天</string>
+	<string name="setting_title">人體生物鐘設置</string>
+	<string name="setting_item_name">姓名</string>
+	<string name="setting_item_no_name">請設置您的姓名</string>
+	<string name="setting_item_birthday">生日（公歷）</string>
+	<string name="setting_item_no_birthday">請設置您的生日</string>
+
+	<string name="bt_ok">確定</string>
+	<string name="bt_ok_01">我搞錯了</string>
+	<string name="bt_ok_02">我知道了</string>
+	<string name="bt_ok_03">開始設置</string>
+	<string name="bt_ok_04">退出程序</string>
+	<string name="bt_ok_05">設置好了</string>
+	<string name="bt_close">關閉</string>
+	<string name="bt_cancel">取消</string>
+
+	<string name="dialog_error_title">哦，出了點問題</string>
+	<string name="error_message_01">您還沒有出生呢，期待您來到這美麗新世界。</string>
+	<string name="error_message_02">您還沒有設置姓名或生日</string>
+
+	<string name="physical">體力</string>
+	<string name="sensitive">情緒</string>
+	<string name="intellectual">智力</string>
+
+	<string name="date_display_format">yyyy年MM月dd日</string>
+	<string name="date_store_format">yyyy-MM-dd</string>
+	<string name="date_store_format_split">-</string>
+	<string name="birthday_warn_days">5</string>
+	<string name="birthday_warn_message">%s天後將是您的生日\n祝您生日快樂!</string>
+	<string name="birthday_message">祝您生日快樂!\n您有什麽願望呢？</string>
+	<string name="birthday_lunar_message">祝您農歷生日快樂!\n許個願吧!</string>
+	<string name="your_birthday">您的生日是%s</string>
+	<string name="your_lunar_birthday">(農歷%s，肖%s)</string>
+	<string name="your_life">至%s您已經在美麗的地球上生活了%s天。</string>
+	<string name="your_life_0">美妙的人生即將開始，您準備好了嗎？</string>
+	<string name="your_life_1">您的到來總會讓我們驚喜！</string>
+
+	<string name="menu_setting">設置</string>
+	<string name="menu_help">幫助</string>
+	<string name="menu_about">關於</string>
+	<string name="menu_exit">退出</string>
+</resources>
